@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --sleeveColor: #00ff00;
+            --chestColor: #0000ff;
+            --stitchColor: rgba(0, 0, 0, 0.5);
+            --stitchArray: 2;
+        }
+        body { 
+            display: grid; 
+            grid-gap: 1vw;
+            grid-template-columns: repeat(3, auto); 
+            height: 100vh;
+            align-items: center; 
+            justify-items: center; 
+            margin: 0;
+        }
+        h2 { text-align: center;}
+        section { 
+            display: grid; 
+            grid-template-columns: 1fr; 
+            grid-template-rows: repeat(2, auto); 
+            width: 30vw; 
+            align-items: center; 
+            justify-items: center; 
+             }
+        svg { grid-row: 2 / -1; grid-column: 1; }
+        #chest {
+            fill: var(--chestColor);
+            stroke: var(--stitchColor);
+            stroke-width:1.94740462;
+            stroke-linecap:butt;
+            stroke-linejoin:miter;
+            stroke-miterlimit:4;
+            stroke-dasharray: var(--stitchArray);
+            stroke-opacity:1;
+        }
+        #right_arm, #left_arm {
+            fill: var(--sleeveColor);
+            stroke: var(--stitchColor);
+            stroke-width:1.94740462;
+            stroke-linecap:butt;
+            stroke-linejoin:miter;
+            stroke-miterlimit:4;
+            stroke-dasharray: var(--stitchArray);
+            stroke-opacity:1;
+        }
+
+        .runway #chest {
+            --chestColor: url(#screen);
+        }
+    </style>
+</head>
+<body>
+    <section class="runway">
+        <h2>Runway</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+            <defs>
+                <style>
+                    .greenrect {
+                        fill: #193326;
+                        stroke: #013801;
+                        stroke-width: 10;
+                        stroke-miterlimit: 10;
+                    }
+                </style>
+                <pattern id="screen" width="100" height="100" patternUnits="userSpaceOnUse">
+                    <rect class="greenrect" width="100" height="100"></rect>
+                </pattern>
+            </defs>
+        <g transform="matrix(1.4509699,0,0,1.4509699,44.896312,-226.96141)">
+            <path id="left_arm" transform="translate(0,103)" d="m 64.407812,108.867 c 0,0 6.929528,38.12731 -7.166033,50.18846 0,0 -16.62566,25.80167 -29.60515,25.33225 -30.4479356,-1.1012 -56.59962,40.95277 -56.59962,40.95277 0,0 19.113286,-174.715724 93.370803,-116.47348 z" />
+        </g>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+        <g transform="matrix(1.4509699,0,0,1.4509699,44.896312,-226.96141)">
+            <path id="right_arm" transform="translate(0,103)" d="m 135.22871,108.86699 c 0,0 -6.92953,38.12732 7.16603,50.18847 0,0 29.21143,39.7391 48.96749,48.35772 l 51.88987,22.63705 c 0,0 -60.90402,-58.03086 -35.8514,-115.17025 9.07862,-20.70629 -68.82454,-46.542892 -72.17199,-6.01299 z" />
+        </g>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+        <g transform="matrix(1.4509699,0,0,1.4509699,44.896312,-226.96141)">
+            <path id="chest" transform="translate(0,103)" d="m 64.40781,108.867 14.353419,-0.12566 c 0,0 1.472143,7.61932 20.97807,7.61932 19.505911,0 21.714131,-7.25129 21.714131,-7.25129 l 13.77528,-0.24238 c 0,0 -7.89001,36.08723 7.16603,50.18847 0,0 78.79359,115.67024 1.50891,115.67024 H 55.574942 c -91.654766,0 1.10411,-114.82732 1.10411,-114.82732 0,0 14.353411,-6.74137 7.728758,-51.03138 z" />
+        </g>
+        </svg>
+    </section>
+    <section class="bespoke">
+        <h2>Bespoke</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+        <path id="left_arm" transform="" d="m 64.407812,11.867 c 0,0 6.929528,38.12731 -7.166033,50.18846 0,0 -22.10072,11.90712 -29.60515,25.33225 C 14.139768,91.22495 1.3887633,64.49713 1.3887633,64.49713 11.568754,44.02145 27.276146,11.6358 64.407812,11.867 Z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+        <path id="right_arm" transform="" d="m 135.22871,11.86699 c 0,0 -6.92953,38.12732 7.16603,50.18847 L 171.9999,87.38771 198.24777,64.49713 C 184.47232,54.208578 182.54752,19.126325 135.22871,11.86699 Z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+        <path id="chest" transform="" d="m 64.40781,11.867 15.252284,3.170177 c 0,0 0.573278,25.779033 20.079205,25.779033 19.505911,0 21.714131,-28.70684 21.714131,-28.70684 l 13.77528,-0.24238 c 0,0 -7.89001,36.08723 7.16603,50.18847 0,0 -4.40553,30.16368 -4.50971,45.35681 -0.16128,23.52296 6.01862,70.31343 6.01862,70.31343 0,0 -65.682288,22.55271 -88.328708,0 0,0 6.034984,-46.79956 5.769675,-70.31526 -0.168305,-14.91769 -4.665565,-44.51206 -4.665565,-44.51206 0,0 14.353411,-6.74137 7.728758,-51.03138 z" /></svg>
+    </section>
+    <section>
+        <h2>Ready To Wear</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+        <path id="left_arm" transform="translate(0,-97)" d="m 64.407812,108.867 c 0,0 6.929528,38.12731 -7.166033,50.18846 L 27.636629,184.38771 1.3887633,161.49713 c 0,0 40.5688367,-52.26209 63.0190487,-52.63013 z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+        <path id="right_arm" transform="translate(0,-97)" d="m 135.22871,108.86699 c 0,0 -6.92953,38.12732 7.16603,50.18847 l 29.60516,25.33225 26.24787,-22.89058 c 0,0 -40.56884,-52.2621 -63.01906,-52.63014 z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+        <path id="chest" transform="translate(0,-97)" d="m 64.40781,108.867 14.353419,-0.12566 c 0,0 1.472143,29.07487 20.97807,29.07487 19.505911,0 21.714131,-28.70684 21.714131,-28.70684 l 13.77528,-0.24238 c 0,0 -7.89001,36.08723 7.16603,50.18847 l 1.50891,115.67024 H 55.574942 l 1.10411,-114.82732 c 0,0 14.353411,-6.74137 7.728758,-51.03138 z" /></svg>
+    </section>
+    <script type="module" src="rack/bespoke.js"></script>
+</body>
+</html>
